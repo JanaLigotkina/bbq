@@ -5,6 +5,8 @@ ruby "3.0.0"
 
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
+gem 'twitter-bootstrap-rails'
+
 gem 'uglifier', '>= 1.3.0'
 
 gem "sprockets-rails"

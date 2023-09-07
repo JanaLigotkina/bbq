@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 	before_action :configure_permitted_parameters, if: :devise_controller?
 
 	# Хелпер будет доступен во всех вьюхах
-	helper_method :current_user_can_edit?
+	helper_method :current_user_can_edit_and_delete?
 
 	def configure_permitted_parameters
   	devise_parameter_sanitizer.permit(
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   	)
 	end
 
-	def current_user_can_edit?(event)
+	def current_user_can_edit_and_delete?(event)
   	user_signed_in? && event.user == current_user
 	end
 end

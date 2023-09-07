@@ -7,6 +7,10 @@ gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
 gem 'devise', '~> 4.9', '>= 4.9.2'
 
+gem 'devise-i18n'
+
+gem 'russian'
+
 gem 'twitter-bootstrap-rails'
 
 gem 'uglifier', '>= 1.3.0'

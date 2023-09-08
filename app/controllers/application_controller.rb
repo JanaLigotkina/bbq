@@ -12,7 +12,10 @@ class ApplicationController < ActionController::Base
   	)
 	end
 
-	def current_user_can_edit_and_delete?(event)
-  	user_signed_in? && event.user == current_user
+	def current_user_can_edit_and_delete?(model)
+  	user_signed_in? && (
+    	model.user == current_user ||
+    	(model.try(:event).present? && model.event.user == current_user)
+  	)
 	end
 end
